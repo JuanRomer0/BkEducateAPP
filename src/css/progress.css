@@ -1,0 +1,36 @@
+/* Estilos para la sección de Learning Progress */
+.learning-progress {
+    padding: 20px;
+}
+
+.learning-progress h1 {
+    font-size: 2rem;
+    color: var(--text-dark, #333);
+    margin-bottom: 25px;
+}
+
+/* Estilos para las tarjetas de curso */
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estos estilos son para la visualización fuera del Shadow DOM /
+/ Los estilos específicos de cada componente están definidos dentro del Shadow DOM */
+course-card {
+    flex: 1;
+    min-width: 280px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    course-card {
+        min-width: 100%;
+    }
+}
+
+/* Estilos para el modal (fuera del Shadow DOM) */
+course-modal {
+    display: block;
+}

@@ -325,3 +325,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     observer.observe(document.body, { childList: true, subtree: true });
 });
+// Función para voltear la tarjeta
+function flipCard(cardId) {
+    const card = document.getElementById(cardId);
+    card.classList.toggle('flipped');
+}
+

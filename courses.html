@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="src/css/courses.css">
   <link rel="stylesheet" href="src/css/styles.css" />
   <script src="src/js/main.js" defer></script>
   <title>Dashboard - LMS</title>
@@ -53,5 +54,270 @@
       <div class="bar"></div>
     </div>
   </header>
+   <h1>Available Courses</h1>
+    
+    <div class="category">
+        <h2>Video Games</h2>
+        <div class="courses-container">
+            <!-- Curso Unity -->
+            <div class="course-card" id="unity-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-image">
+                            <img src="src/img/pexels-photo-3165335.jpeg" alt="Unity Game Development">
+                            <span class="course-level">Intermediate</span>
+                            <span class="course-duration">12 weeks</span>
+                        </div>
+                        <div class="course-info">
+                            <h3>Unity Game Development</h3>
+                            <p>Create immersive 3D games with Unity. Learn C# programming, game physics, and professional game development.</p>
+                            <div class="buttons">
+                                <button class="btn-enroll">Enroll Now</button>
+                                <button class="btn-info" onclick="flipCard('unity-card')">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Unity Game Development</h3>
+                        <div class="blue-line"></div>
+                        
+                        <div class="card-section">
+                            <h4>Prerequisites</h4>
+                            <p>Basic programming knowledge in any language. Understanding of 3D geometry is helpful but not required.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>What You'll Learn</h4>
+                            <p>Build complete 3D games, master C# programming, implement game physics, create engaging UI systems, and optimize game performance.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>Course Structure</h4>
+                            <p>24 interactive lessons, 12 hands-on projects, 4 milestone assignments, and 1 capstone project.</p>
+                        </div>
+                        
+                        <button class="btn-close" onclick="flipCard('unity-card')">Close</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curso Unreal -->
+            <div class="course-card" id="unreal-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-image">
+                            <img src="src/img/pexels-photo-442576.jpeg" alt="Unreal Engine Basics">
+                            <span class="course-level">Beginner</span>
+                            <span class="course-duration">8 weeks</span>
+                        </div>
+                        <div class="course-info">
+                            <h3>Unreal Engine Basics</h3>
+                            <p>Master the fundamentals of Unreal Engine 5. Cover Blueprint visual scripting, level design, and game mechanics.</p>
+                            <div class="buttons">
+                                <button class="btn-enroll">Enroll Now</button>
+                                <button class="btn-info" onclick="flipCard('unreal-card')">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Unreal Engine Basics</h3>
+                        <div class="blue-line"></div>
+                        
+                        <div class="card-section">
+                            <h4>Prerequisites</h4>
+                            <p>No prior experience required. Basic computer skills and interest in game development.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>What You'll Learn</h4>
+                            <p>Create your first game in Unreal Engine 5, understand Blueprint visual scripting, implement game mechanics, and design immersive levels.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>Course Structure</h4>
+                            <p>16 video lessons, 8 guided projects, weekly assignments, and forum discussions.</p>
+                        </div>
+                        
+                        <button class="btn-close" onclick="flipCard('unreal-card')">Close</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curso Game Design -->
+            <div class="course-card" id="gamedesign-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-image">
+                            <img src="src/img/pexels-photo-7915579.jpeg" alt="Game Design Principles">
+                            <span class="course-level">All Levels</span>
+                            <span class="course-duration">10 weeks</span>
+                        </div>
+                        <div class="course-info">
+                            <h3>Game Design Principles</h3>
+                            <p>Learn essential game design concepts including mechanics, dynamics, aesthetics, and player psychology.</p>
+                            <div class="buttons">
+                                <button class="btn-enroll">Enroll Now</button>
+                                <button class="btn-info" onclick="flipCard('gamedesign-card')">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Game Design Principles</h3>
+                        <div class="blue-line"></div>
+                        
+                        <div class="card-section">
+                            <h4>Prerequisites</h4>
+                            <p>No technical prerequisites. Interest in games and design thinking is recommended.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>What You'll Learn</h4>
+                            <p>Understand player psychology, create balanced game mechanics, design engaging levels, and implement meaningful game narratives.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>Course Structure</h4>
+                            <p>20 lessons covering theory and practice, 5 case studies of successful games, and 3 design projects.</p>
+                        </div>
+                        
+                        <button class="btn-close" onclick="flipCard('gamedesign-card')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="category">
+        <h2>Backend</h2>
+        <div class="courses-container">
+            <!-- Curso Backend 1 -->
+            <div class="course-card" id="nodejs-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-image">
+                            <img src="/api/placeholder/340/190" alt="Backend Development with Node.js">
+                            <span class="course-level">Intermediate</span>
+                            <span class="course-duration">10 weeks</span>
+                        </div>
+                        <div class="course-info">
+                            <h3>Node.js Development</h3>
+                            <p>Build scalable web applications with Node.js. Learn Express, MongoDB, and RESTful API design.</p>
+                            <div class="buttons">
+                                <button class="btn-enroll">Enroll Now</button>
+                                <button class="btn-info" onclick="flipCard('nodejs-card')">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Node.js Development</h3>
+                        <div class="blue-line"></div>
+                        
+                        <div class="card-section">
+                            <h4>Prerequisites</h4>
+                            <p>Basic JavaScript knowledge and understanding of web concepts (HTTP, APIs).</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>What You'll Learn</h4>
+                            <p>Build RESTful APIs, implement authentication systems, work with databases, and deploy scalable applications.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>Course Structure</h4>
+                            <p>20 video lessons, 10 practical exercises, and a final project building a complete backend system.</p>
+                        </div>
+                        
+                        <button class="btn-close" onclick="flipCard('nodejs-card')">Close</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curso Backend 2 -->
+            <div class="course-card" id="python-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-image">
+                            <img src="/api/placeholder/340/190" alt="Python Backend Development">
+                            <span class="course-level">Beginner</span>
+                            <span class="course-duration">8 weeks</span>
+                        </div>
+                        <div class="course-info">
+                            <h3>Python Backend Development</h3>
+                            <p>Learn backend development with Python using Flask and Django frameworks.</p>
+                            <div class="buttons">
+                                <button class="btn-enroll">Enroll Now</button>
+                                <button class="btn-info" onclick="flipCard('python-card')">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Python Backend Development</h3>
+                        <div class="blue-line"></div>
+                        
+                        <div class="card-section">
+                            <h4>Prerequisites</h4>
+                            <p>Basic programming knowledge in any language.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>What You'll Learn</h4>
+                            <p>Master Python syntax, build web applications with Flask and Django, implement database integration, and deploy secure applications.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>Course Structure</h4>
+                            <p>16 lessons, 8 coding challenges, and 4 progressive web application projects.</p>
+                        </div>
+                        
+                        <button class="btn-close" onclick="flipCard('python-card')">Close</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curso Backend 3 -->
+            <div class="course-card" id="spring-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="course-image">
+                            <img src="/api/placeholder/340/190" alt="Java Spring Boot">
+                            <span class="course-level">Advanced</span>
+                            <span class="course-duration">12 weeks</span>
+                        </div>
+                        <div class="course-info">
+                            <h3>Java Spring Boot</h3>
+                            <p>Master enterprise application development with Java Spring Boot framework.</p>
+                            <div class="buttons">
+                                <button class="btn-enroll">Enroll Now</button>
+                                <button class="btn-info" onclick="flipCard('spring-card')">More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <h3>Java Spring Boot</h3>
+                        <div class="blue-line"></div>
+                        
+                        <div class="card-section">
+                            <h4>Prerequisites</h4>
+                            <p>Java programming experience and basic knowledge of web development concepts.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>What You'll Learn</h4>
+                            <p>Build enterprise applications, implement microservices architecture, work with databases using JPA, and secure Spring applications.</p>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h4>Course Structure</h4>
+                            <p>24 comprehensive lessons, 12 practical exercises, and a capstone enterprise project.</p>
+                        </div>
+                        
+                        <button class="btn-close" onclick="flipCard('spring-card')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/course-modal.js"></script>
 </body>
 </html>

@@ -176,7 +176,7 @@ class ProgressModal extends HTMLElement {
         top: 50%;
         transform: translateX(-12.5%) translateY(-50%) scale(1.1);
         background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-        width: 99%;
+        width: 95%;
         height: 180px;
         z-index: 1;
         object-fit: cover;
@@ -203,7 +203,7 @@ class ProgressModal extends HTMLElement {
       }
 
       .modal-progress {
-        height: 6px;
+        height: 8px;
         background-color: rgba(255, 255, 255, 0.2);
         margin-top: 15px;
         border-radius: 3px;
@@ -215,7 +215,7 @@ class ProgressModal extends HTMLElement {
 
       .modal-progress-value {
         height: 100%;
-        background-color: rgba(0,255,0);
+        background-color: #2ecc61;
         border-radius: 3px;
       }
 
@@ -223,7 +223,7 @@ class ProgressModal extends HTMLElement {
         font-size: 0.9rem;
         position: absolute;
         right: 20px;
-        bottom: 9px;
+        bottom: 11px;
         font-weight: 900;
         z-index: 2;
       }

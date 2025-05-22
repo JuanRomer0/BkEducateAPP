@@ -32,27 +32,27 @@
         "id": 2,
         "title": "Data Science",
         "progress": 60,
-        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxwYXRoIGZpbGw9IiMzNDk4ZGIiIGQ9Ik0yMCwyMCBMODAsMjAgTDgwLDgwIEwyMCw4MCBMMjAsMjBaIiAvPgogICAgPGNpcmNsZSBjeD0iMzAiIGN5PSI0MCIgcj0iNSIgZmlsbD0id2hpdGUiIC8+CiAgICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjMwIiByPSI3IiBmaWxsPSJ3aGl0ZSIgLz4KICAgIDxjaXJjbGUgY3g9IjcwIiBjeT0iNzAiIHI9IjEwIiBmaWxsPSJ3aGl0ZSIgLz4KICAgIDxjaXJjbGUgY3g9IjQwIiBjeT0iNjAiIHI9IjgiIGZpbGw9IndoaXRlIiAvPgogICAgPGxpbmUgeDE9IjMwIiB5MT0iNDAiIHgyPSI2MCIgeTI9IjMwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8bGluZSB4MT0iNjAiIHkxPSIzMCIgeDI9IjcwIiB5Mj0iNzAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAgIDxsaW5lIHgxPSI3MCIgeTE9IjcwIiB4Mj0iNDAiIHkyPSI2MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogICAgPGxpbmUgeDE9IjQwIiB5MT0iNjAiIHgyPSIzMCIgeTI9IjQwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIC8+Cjwvc3ZnPg==",
+        "icon": "/src/img/datascience.jpeg",
         "topics": [
           {
-            "title": "Python for Data Science",
-            "description": "Libraries like NumPy, Pandas, Matplotlib",
+            "title": "Python Programming",
+            "description": "Basic syntax, data structures, and functions",
             "progress": 90
           },
           {
-            "title": "Statistics Fundamentals",
-            "description": "Descriptive statistics, probability, distributions",
-            "progress": 75
+            "title": "Data Analysis",
+            "description": "Working with pandas and numpy",
+            "progress": 70
           },
           {
-            "title": "Machine Learning Basics",
-            "description": "Supervised and unsupervised learning algorithms",
-            "progress": 50
+            "title": "Machine Learning",
+            "description": "Basic algorithms and model training",
+            "progress": 45
           },
           {
             "title": "Data Visualization",
-            "description": "Creating effective visualizations with Python tools",
-            "progress": 65
+            "description": "Creating charts and interactive visualizations",
+            "progress": 35
           }
         ]
       },
@@ -60,22 +60,27 @@
         "id": 3,
         "title": "Mobile Development",
         "progress": 45,
-        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxyZWN0IHg9IjI1IiB5PSIxMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjgwIiByeD0iNSIgcnk9IjUiIGZpbGw9IiMzNDk4ZGIiIC8+CiAgICA8cmVjdCB4PSIzMCIgeT0iMTUiIHdpZHRoPSI0MCIgaGVpZ2h0PSI2MCIgZmlsbD0id2hpdGUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjgwIiByPSI1IiBmaWxsPSJ3aGl0ZSIgLz4KPC9zdmc+",
+        "icon": "/src/img/mobiledevelopment.jpeg",
         "topics": [
           {
             "title": "Mobile UI Design",
-            "description": "User interface design principles for mobile apps",
-            "progress": 65
+            "description": "Principles of mobile interface design",
+            "progress": 80
           },
           {
-            "title": "React Native",
-            "description": "Cross-platform development with React Native",
-            "progress": 40
+            "title": "React Native Basics",
+            "description": "Components, navigation, and state management",
+            "progress": 55
           },
           {
-            "title": "Native App Development",
-            "description": "iOS development with Swift, Android with Kotlin",
+            "title": "Native APIs",
+            "description": "Camera, location, and device features",
             "progress": 30
+          },
+          {
+            "title": "App Publishing",
+            "description": "Preparing and deploying to app stores",
+            "progress": 15
           }
         ]
       },
@@ -83,21 +88,26 @@
         "id": 4,
         "title": "Cloud Computing",
         "progress": 30,
-        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxwYXRoIGZpbGw9IiMzNDk4ZGIiIGQ9Ik0yNSw2NSBDMTUuNiw2NSA4LDU3LjQgOCw0OCBDOCwzOC42IDE1LjYsMzEgMjUsMzEgQzI1LDMxIDI1LDMxIDI1LDMxIEMyOC4zLDIwLjEgMzguNCwxMiA1MCwxMiBDNjQuNCwxMiA3NiwyMy42IDc2LDM4IEM3NiwzOCA3NiwzOCA3NiwzOCBDODQuOCwzOCA5Miw0NS4yIDkyLDU0IEM5Miw2Mi44IDg0LjgsNzAgNzYsNzAgTDI1LDcwIEwyNSw2NVoiIC8+Cjwvc3ZnPg==",
+        "icon": "/src/img/cloudcomputing.jpeg",
         "topics": [
           {
             "title": "Cloud Fundamentals",
-            "description": "Introduction to cloud computing concepts",
-            "progress": 65
+            "description": "Basic concepts and service models",
+            "progress": 100
           },
           {
             "title": "AWS Services",
-            "description": "Amazon Web Services core services",
-            "progress": 30
+            "description": "EC2, S3, and core AWS services",
+            "progress": 40
           },
           {
-            "title": "Azure and GCP",
-            "description": "Microsoft Azure and Google Cloud Platform",
+            "title": "Cloud Security",
+            "description": "Security best practices and implementation",
+            "progress": 25
+          },
+          {
+            "title": "Serverless Computing",
+            "description": "Lambda functions and serverless architecture",
             "progress": 15
           }
         ]

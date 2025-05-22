@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="src/css/progress.css"/>
   <script src="src/js/main.js" defer></script>
   <script src="src/js/progress-modal.js" defer></script>
-  <script src="src/js/course-modal.js" defer></script>
   <title>Dashboard - LMS</title>
 </head>
 <body>
@@ -57,47 +56,48 @@
     </div>
   </header>
 
-  <main>
-    <div class="learning-progress">
-      <h1>Learning Progress</h1>
-      <div class="course-cards">
-        <!-- Las tarjetas serán agregadas por JavaScript -->
-      </div>
+   <!-- Main Content -->
+   <main class="container">
+    <h2 class="page-title">Learning Progress</h2>
+    <div class="course-cards">
+        <!-- Course cards will be inserted here by JavaScript -->
     </div>
-  </main>
+</main>
 
-  <!-- Modal para detalles del curso (será gestionado por los Web Components) -->
-  <course-modal></course-modal>
-
-  <!-- Templates para los Web Components -->
-  <template id="course-card-template">
+<!-- Templates for Web Components -->
+<template id="course-card-template">
     <div class="course-card">
-      <h2></h2>
-      <div class="progress-bar">
-        <div class="progress-value"></div>
-      </div>
-      <div class="completion-text"></div>
-      <a href="#" class="view-topics">Click to view topics →</a>
+        <h2></h2>
+        <div class="progress-bar">
+            <div class="progress-value"></div>
+        </div>
+        <div class="completion-text"></div>
+        <a href="#" class="view-topics">Click to view topics →</a>
     </div>
-  </template>
+</template>
 
-  <template id="course-modal-template">
+<template id="course-modal-template">
     <div class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2></h2>
-          <img class="course-icon" src="" alt="Course Icon">
-          <div class="modal-progress">
-            <div class="modal-progress-value"></div>
-          </div>
-          <span class="modal-completion"></span>
-          <button class="close-btn">×</button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2></h2>
+                <div class="modal-progress">
+                    <div class="modal-progress-value"></div>
+                </div>
+                <div class="modal-completion"></div>
+                <img class="course-icon" src="/placeholder.svg" alt="">
+                <button class="close-btn">×</button>
+            </div>
+            <div class="modal-body"></div>
         </div>
-        <div class="modal-body">
-          <!-- Los temas se generarán dinámicamente -->
-        </div>
-      </div>
     </div>
-  </template>
+</template>
+
+<!-- Progress Modal Component -->
+<progress-modal></progress-modal>
+
+<!-- Scripts -->
+<script src="js/progress-card.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

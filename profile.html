@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="src/css/header.css" />
-  <script src="src/js/main.js" defer></script>
-  <title>Profile - LMS</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="src/css/profile.css">
+  <script src="src/js/page.js" defer></script>
+  <title>Dashboard - LMS</title>
 </head>
 <body>
   <header id="headerColor">
@@ -34,9 +35,9 @@
       </select>
     </div>
     
-    <div class="user-menu">
+    <div class="user-menu"> 
         <div class="user-info">
-            <img src="images/user.jpg" alt="User Profile">
+            <img src="src/img/imagendeperfil.jpeg" alt="User Profile">
             <span>John Doe</span>
             <span style="color: white;">&#9662;</span> <!-- Flecha hacia abajo -->
         </div>
@@ -53,5 +54,120 @@
       <div class="bar"></div>
     </div>
   </header>
+  <main>
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-banner"></div>
+        <div class="profile-avatar">
+          <img src="src/img/imagendeperfil.jpeg" alt="John Doe">
+        </div>
+        <h1 class="profile-name">John Doe</h1>
+        <p class="profile-title">Computer Science Student</p>
+      </div>
+      
+      <div class="profile-section">
+        <h2 class="section-title">Personal Information</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" value="John Doe">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" value="john.doe@example.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="tel" class="form-control" value="+1 234 567 890">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Location</label>
+            <input type="text" class="form-control" value="New York, USA">
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-section">
+        <h2 class="section-title">Academic Information</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Student ID</label>
+            <input type="text" class="form-control" value="CS2019001">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Program</label>
+            <input type="text" class="form-control" value="Bachelor of Computer Science">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Start Date</label>
+            <input type="text" class="form-control" value="10/09/2019">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Expected Graduation</label>
+            <input type="text" class="form-control" value="30/06/2023">
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-section">
+        <h2 class="section-title">Progress Overview</h2>
+        <div class="progress-overview">
+          <div class="stat-card">
+            <div class="stat-value">12</div>
+            <div class="stat-label">Courses Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Certificates Earned</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">92%</div>
+            <div class="stat-label">Average Grade</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-section">
+        <h2 class="section-title">Preferences</h2>
+        <div class="preference-item">
+          <div class="preference-title">
+            <i class="fas fa-envelope"></i>
+            <strong>Email Notifications</strong>
+          </div>
+          <label class="preference-description">
+            <input type="checkbox" id="cbox1" value="first_checkbox">
+            Receive updates about your courses and assignments
+          </label>
+        </div>
+    
+        <div class="preference-item">
+          <div class="preference-title">
+            <i class="fas fa-user"></i>
+            <strong>Public Profile</strong>
+          </div>
+          <label class="preference-description">
+            <input type="checkbox" id="cbox1" value="first_checkbox">
+            Make your profile visible to other students
+          </label>
+        </div>
+
+        <div class="preference-item">
+          <div class="preference-title">
+            <i class="fas fa-chart-line"></i>
+            <strong>Show Progress</strong>
+          </div>
+          <label class="preference-description">
+            <input type="checkbox" id="cbox1" value="first_checkbox">
+            Display your progress on your public profile
+          </label>
+        </div>
+        
+        <div class="action-buttons">
+          <button class="btn btn-secondary">Cancel</button>
+          <button class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

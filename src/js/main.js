@@ -1,5 +1,5 @@
 const buttonColor = document.getElementById('botonColor');
-const header = document.getElementById('headerColor');
+const header = document.getElementById('headerColor','mainMenu');
 
 // Verifica si ya se guardó el modo oscuro previamente
 const darkMode = localStorage.getItem('darkMode');
@@ -44,6 +44,7 @@ document.addEventListener('click', (e) => {
   if (!userMenu.contains(e.target)) userMenu.classList.remove('active');
   if (!langSelector.contains(e.target)) langSelector.classList.remove('active');
 });
+
 
 // API URL
 const API_URL = "http://localhost:3000/courses"
@@ -103,11 +104,6 @@ async function initCourseCards() {
     courseCard.setAttribute("icon", course.icon)
     courseCard.setAttribute("topics", JSON.stringify(course.topics))
     courseCard.setAttribute("data-id", course.id)
-
-    // Ya no necesitamos estos estilos inline ya que usamos grid
-    // courseCard.style.flex = "1"
-    // courseCard.style.minWidth = "250px"
-    // courseCard.style.maxWidth = "350px"
 
     courseCardsContainer.appendChild(courseCard)
   })

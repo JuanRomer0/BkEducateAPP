@@ -44,3 +44,74 @@ document.addEventListener('click', (e) => {
   if (!userMenu.contains(e.target)) userMenu.classList.remove('active');
   if (!langSelector.contains(e.target)) langSelector.classList.remove('active');
 });
+
+// API URL
+const API_URL = "http://localhost:3000/courses"
+
+// Función para cargar los datos de los cursos desde la API
+async function loadCoursesData() {
+  try {
+    const response = await fetch(API_URL)
+    if (!response.ok) {
+      throw new Error(`Error al cargar los cursos: ${response.status}`)
+    }
+    return await response.json()
+  } catch (error) {
+    console.error("Error al cargar los datos de cursos:", error)
+    // Fallback a datos de ejemplo si no se puede cargar desde la API
+    return coursesData
+  }
+}
+
+// Función para actualizar el progreso de un curso en la API
+async function updateCourseProgress(courseId, progress) {
+  try {
+    const response = await fetch(`${API_URL}/${courseId}/progress`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ progress }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`Error al actualizar el progreso: ${response.status}`)
+    }
+
+    return await response.json()
+  } catch (error) {
+    console.error("Error al actualizar el progreso del curso:", error)
+    return null
+  }
+}
+
+// Función para inicializar las tarjetas de cursos
+async function initCourseCards() {
+  const courseCardsContainer = document.querySelector(".course-cards")
+
+  // Limpiar contenedor
+  courseCardsContainer.innerHTML = ""
+
+  // Cargar datos de cursos desde la API
+  const courses = await loadCoursesData()
+
+  // Crear tarjetas de cursos
+  courses.forEach((course) => {
+    const courseCard = document.createElement("course-card")
+    courseCard.setAttribute("title", course.title)
+    courseCard.setAttribute("progress", course.progress)
+    courseCard.setAttribute("icon", course.icon)
+    courseCard.setAttribute("topics", JSON.stringify(course.topics))
+    courseCard.setAttribute("data-id", course.id)
+
+    // Ya no necesitamos estos estilos inline ya que usamos grid
+    // courseCard.style.flex = "1"
+    // courseCard.style.minWidth = "250px"
+    // courseCard.style.maxWidth = "350px"
+
+    courseCardsContainer.appendChild(courseCard)
+  })
+}
+
+// Inicializar cuando el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", initCourseCards)

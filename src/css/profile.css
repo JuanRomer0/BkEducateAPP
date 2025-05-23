@@ -269,12 +269,15 @@
   }
 
 
+<<<<<<< HEAD
 
   nav {
     flex: 1;
     display: flex;
     justify-content: center;
   }
+=======
+>>>>>>> release/v1.1.0
   /* Main Content Styles */
   main {
     max-width: 1200px;

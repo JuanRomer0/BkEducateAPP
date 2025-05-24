@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="src/css/header.css" />
-  <script src="src/js/main.js" defer></script>
+  <link rel="stylesheet" href="src/css/header.css"/>
+  <link rel="stylesheet" href="src/css/assignments.css"/>
+  <link rel="stylesheet" href="src/css/filter.css"/>
   <title>Assignments - LMS</title>
 </head>
 <body>
@@ -33,12 +34,12 @@
         <option>Deutsch</option>
       </select>
     </div>
-    
+
     <div class="user-menu">
         <div class="user-info">
             <img src="src/img/imagendeperfil.jpeg" alt="User Profile">
             <span>John Doe</span>
-            <span style="color: white;">&#9662;</span> <!-- Flecha hacia abajo -->
+            <span style="color: white;">&#9662;</span>
         </div>
         <div class="dropdown">
             <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
@@ -46,12 +47,55 @@
             <a href="#" style="color: var(--danger-color);"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
     </div>
-    
+
     <div class="hamburger">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
   </header>
+  
+  <div class="container">
+        <h1>Your Assignments</h1>
+        
+        <div class="warning-banner">
+            <span class="warning-emoji">⚠️</span>
+            <span>Some assignments require course completion before submission.</span>
+        </div>
+        
+        <!-- FILTROS -->
+        <div id="assignment-filters" class="filter-container">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="filter-icon">📋</span>
+                    <span>All</span>
+                </button>
+                <button class="filter-btn" data-filter="pending">
+                    <span class="filter-icon">⏳</span>
+                    <span>Pending</span>
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    <span class="filter-icon">✅</span>
+                    <span>Completed</span>
+                </button>
+                <button class="filter-btn" data-filter="overdue">
+                    <span class="filter-icon">⚠️</span>
+                    <span>Overdue</span>
+                </button>
+                <button class="filter-btn" data-filter="locked">
+                    <span class="filter-icon">🔒</span>
+                    <span>Locked</span>
+                </button>
+            </div>
+        </div>
+        
+        <assignment-list></assignment-list>
+  </div>
+
+    <!-- Scripts organizados -->
+    <script src="src/js/components/submit-modal.js"></script>
+    <script src="src/js/components/assignment-list.js"></script>
+    <script src="src/js/components/assignment-filter-handler.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>

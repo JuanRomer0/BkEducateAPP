@@ -1,117 +1,176 @@
 {
-    "courses": [
-      {
-        "id": 1,
-        "title": "Web Development",
-        "progress": 80,
-        "icon": "/src/img/pexels-photo-11035471.jpeg",
-        "topics": [
-          {
-            "title": "HTML Fundamentals",
-            "description": "Basic structure, elements, and semantic markup",
-            "progress": 100
-          },
-          {
-            "title": "CSS Styling",
-            "description": "Selectors, properties, layouts, and responsive design",
-            "progress": 85
-          },
-          {
-            "title": "JavaScript Basics",
-            "description": "Variables, functions, DOM manipulation",
-            "progress": 75
-          },
-          {
-            "title": "Frontend Frameworks",
-            "description": "Introduction to modern frameworks and libraries",
-            "progress": 60
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "title": "Data Science",
-        "progress": 60,
-        "icon": "/src/img/datascience.jpeg",
-        "topics": [
-          {
-            "title": "Python Programming",
-            "description": "Basic syntax, data structures, and functions",
-            "progress": 90
-          },
-          {
-            "title": "Data Analysis",
-            "description": "Working with pandas and numpy",
-            "progress": 70
-          },
-          {
-            "title": "Machine Learning",
-            "description": "Basic algorithms and model training",
-            "progress": 45
-          },
-          {
-            "title": "Data Visualization",
-            "description": "Creating charts and interactive visualizations",
-            "progress": 35
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "title": "Mobile Development",
-        "progress": 45,
-        "icon": "/src/img/mobiledevelopment.jpeg",
-        "topics": [
-          {
-            "title": "Mobile UI Design",
-            "description": "Principles of mobile interface design",
-            "progress": 80
-          },
-          {
-            "title": "React Native Basics",
-            "description": "Components, navigation, and state management",
-            "progress": 55
-          },
-          {
-            "title": "Native APIs",
-            "description": "Camera, location, and device features",
-            "progress": 30
-          },
-          {
-            "title": "App Publishing",
-            "description": "Preparing and deploying to app stores",
-            "progress": 15
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "title": "Cloud Computing",
-        "progress": 30,
-        "icon": "/src/img/cloudcomputing.jpeg",
-        "topics": [
-          {
-            "title": "Cloud Fundamentals",
-            "description": "Basic concepts and service models",
-            "progress": 100
-          },
-          {
-            "title": "AWS Services",
-            "description": "EC2, S3, and core AWS services",
-            "progress": 40
-          },
-          {
-            "title": "Cloud Security",
-            "description": "Security best practices and implementation",
-            "progress": 25
-          },
-          {
-            "title": "Serverless Computing",
-            "description": "Lambda functions and serverless architecture",
-            "progress": 15
-          }
-        ]
-      }
-    ]
-  }
-  
+  "courses": [
+    {
+      "id": 1,
+      "title": "Web Development",
+      "progress": 80,
+      "icon": "/src/img/pexels-photo-11035471.jpeg",
+      "topics": [
+        {
+          "title": "HTML Fundamentals",
+          "description": "Basic structure, elements, and semantic markup",
+          "progress": 100
+        },
+        {
+          "title": "CSS Styling",
+          "description": "Selectors, properties, layouts, and responsive design",
+          "progress": 85
+        },
+        {
+          "title": "JavaScript Basics",
+          "description": "Variables, functions, DOM manipulation",
+          "progress": 75
+        },
+        {
+          "title": "Frontend Frameworks",
+          "description": "Introduction to modern frameworks and libraries",
+          "progress": 60
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Data Science",
+      "progress": 60,
+      "icon": "/src/img/datascience.jpeg",
+      "topics": [
+        {
+          "title": "Python Programming",
+          "description": "Basic syntax, data structures, and functions",
+          "progress": 90
+        },
+        {
+          "title": "Data Analysis",
+          "description": "Working with pandas and numpy",
+          "progress": 70
+        },
+        {
+          "title": "Machine Learning",
+          "description": "Basic algorithms and model training",
+          "progress": 45
+        },
+        {
+          "title": "Data Visualization",
+          "description": "Creating charts and interactive visualizations",
+          "progress": 35
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Mobile Development",
+      "progress": 45,
+      "icon": "/src/img/mobiledevelopment.jpeg",
+      "topics": [
+        {
+          "title": "Mobile UI Design",
+          "description": "Principles of mobile interface design",
+          "progress": 80
+        },
+        {
+          "title": "React Native Basics",
+          "description": "Components, navigation, and state management",
+          "progress": 55
+        },
+        {
+          "title": "Native APIs",
+          "description": "Camera, location, and device features",
+          "progress": 30
+        },
+        {
+          "title": "App Publishing",
+          "description": "Preparing and deploying to app stores",
+          "progress": 15
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Cloud Computing",
+      "progress": 30,
+      "icon": "/src/img/cloudcomputing.jpeg",
+      "topics": [
+        {
+          "title": "Cloud Fundamentals",
+          "description": "Basic concepts and service models",
+          "progress": 100
+        },
+        {
+          "title": "AWS Services",
+          "description": "EC2, S3, and core AWS services",
+          "progress": 40
+        },
+        {
+          "title": "Cloud Security",
+          "description": "Security best practices and implementation",
+          "progress": 25
+        },
+        {
+          "title": "Serverless Computing",
+          "description": "Lambda functions and serverless architecture",
+          "progress": 15
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "id": 1,
+      "title": "Final Project: E-commerce Platform",
+      "subtitle": "Full Stack Development",
+      "description": "Build a complete e-commerce platform using React, Node.js, and MongoDB. Implement user authentication, product management, shopping cart, and payment processing.",
+      "dueDate": "Mar 14, 2024",
+      "points": 100,
+      "type": "Project",
+      "requiredModules": ["Frontend Development", "Backend Integration", "Database Design"],
+      "attachments": 2,
+      "status": "pending",
+      "subject": "Web Development",
+      "submitted": false
+    },
+    {
+      "id": 2,
+      "title": "Data Analysis Report",
+      "subtitle": "Data Science Fundamentals",
+      "description": "Analyze the provided dataset using Python and Pandas. Create visualizations and write a comprehensive report on your findings.",
+      "dueDate": "Mar 19, 2024",
+      "points": 50,
+      "type": "Report",
+      "requiredModules": ["Data Analysis", "Statistical Methods"],
+      "attachments": 1,
+      "status": "locked",
+      "subject": "Data Science",
+      "courseProgress": "60% completed",
+      "submitted": false
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Case Study",
+      "subtitle": "User Interface Design",
+      "description": "Complete a case study on the redesign of a popular mobile application. Include user research, wireframes, and final design mockups.",
+      "dueDate": "Feb 27, 2024",
+      "points": 75,
+      "type": "Case Study",
+      "requiredModules": ["User Research", "Interface Design"],
+      "attachments": 3,
+      "status": "completed",
+      "subject": "Design",
+      "submitted": true
+    },
+    {
+      "id": 4,
+      "title": "Algorithm Implementation",
+      "subtitle": "Advanced Algorithms",
+      "description": "Implement and optimize three different sorting algorithms. Compare their performance and write a detailed analysis.",
+      "dueDate": "Feb 24, 2024",
+      "points": 60,
+      "type": "Implementation",
+      "requiredModules": ["Algorithm Analysis", "Data Structures"],
+      "attachments": 2,
+      "status": "locked", 
+      "subject": "Computer Science",
+      "courseProgress": "40% completed",
+      "submitted": false
+    }
+  ]
+}

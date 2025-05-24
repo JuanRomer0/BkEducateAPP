@@ -1,0 +1,59 @@
+/* Estilos para el componente de filtro */
+.filter-container {
+    margin: 20px 0;
+    background: transparent;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    background: #f8f9fa;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6c757d;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    border: 2px solid transparent;
+}
+
+.filter-btn:hover {
+    background: #e9ecef;
+    transform: translateY(-1px);
+    border-color: #007bff;
+}
+
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+    border-color: #007bff;
+}
+
+.filter-icon {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .filter-tabs {
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        flex: 1;
+        justify-content: center;
+        min-width: 0;
+    }
+}

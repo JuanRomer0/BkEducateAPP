@@ -185,7 +185,8 @@
   .language-selector {
     background-color: transparent;
     color: white;
-    margin-left: -700px;
+    margin-left: -600px;
+    padding-right: 50px;
     margin-top: 5px;
   }
   

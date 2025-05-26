@@ -1,7 +1,7 @@
 {
   "courses": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Web Development",
       "progress": 80,
       "icon": "/src/img/pexels-photo-11035471.jpeg",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Data Science",
       "progress": 60,
       "icon": "/src/img/datascience.jpeg",
@@ -57,7 +57,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Mobile Development",
       "progress": 45,
       "icon": "/src/img/mobiledevelopment.jpeg",
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Cloud Computing",
       "progress": 30,
       "icon": "/src/img/cloudcomputing.jpeg",
@@ -115,28 +115,35 @@
   ],
   "assignments": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Final Project: E-commerce Platform",
       "subtitle": "Full Stack Development",
       "description": "Build a complete e-commerce platform using React, Node.js, and MongoDB. Implement user authentication, product management, shopping cart, and payment processing.",
-      "dueDate": "Mar 14, 2024",
+      "dueDate": "2024-03-14",
       "points": 100,
       "type": "Project",
-      "requiredModules": ["Frontend Development", "Backend Integration", "Database Design"],
+      "requiredModules": [
+        "Frontend Development",
+        "Backend Integration",
+        "Database Design"
+      ],
       "attachments": 2,
-      "status": "pending",
+      "status": "completed",
       "subject": "Web Development",
       "submitted": false
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Data Analysis Report",
       "subtitle": "Data Science Fundamentals",
       "description": "Analyze the provided dataset using Python and Pandas. Create visualizations and write a comprehensive report on your findings.",
-      "dueDate": "Mar 19, 2024",
+      "dueDate": "2024-03-19",
       "points": 50,
       "type": "Report",
-      "requiredModules": ["Data Analysis", "Statistical Methods"],
+      "requiredModules": [
+        "Data Analysis",
+        "Statistical Methods"
+      ],
       "attachments": 1,
       "status": "locked",
       "subject": "Data Science",
@@ -144,30 +151,36 @@
       "submitted": false
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "UI/UX Case Study",
       "subtitle": "User Interface Design",
       "description": "Complete a case study on the redesign of a popular mobile application. Include user research, wireframes, and final design mockups.",
-      "dueDate": "Feb 27, 2024",
+      "dueDate": "2024-02-27",
       "points": 75,
       "type": "Case Study",
-      "requiredModules": ["User Research", "Interface Design"],
+      "requiredModules": [
+        "User Research",
+        "Interface Design"
+      ],
       "attachments": 3,
       "status": "completed",
       "subject": "Design",
       "submitted": true
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Algorithm Implementation",
       "subtitle": "Advanced Algorithms",
       "description": "Implement and optimize three different sorting algorithms. Compare their performance and write a detailed analysis.",
-      "dueDate": "Feb 24, 2024",
+      "dueDate": "2024-02-24",
       "points": 60,
       "type": "Implementation",
-      "requiredModules": ["Algorithm Analysis", "Data Structures"],
+      "requiredModules": [
+        "Algorithm Analysis",
+        "Data Structures"
+      ],
       "attachments": 2,
-      "status": "locked", 
+      "status": "locked",
       "subject": "Computer Science",
       "courseProgress": "40% completed",
       "submitted": false

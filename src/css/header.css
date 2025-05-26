@@ -49,6 +49,7 @@
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
   }
   
   .logo-container {
@@ -67,7 +68,7 @@
   .menu {
     display: flex;
     gap: 2rem;
-    margin-right: 600px;
+    margin-right: -500px;
     margin-bottom: 5px;
     align-items: center;
   }
@@ -100,7 +101,7 @@
     margin-top: 10px;
     line-height: 21px;
     height: 50px;
-    margin-left: 280px;
+    margin-left: 120px;
   }
   
   .lms-nav {
@@ -180,12 +181,9 @@
     cursor: pointer;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-  }
-  
-  .language-selector {
     background-color: transparent;
     color: white;
-    margin-left: -600px;
+    margin-left: 400px;
     padding-right: 50px;
     margin-top: 5px;
   }
@@ -246,7 +244,7 @@
   .user-menu {
     display: flex;
     position: relative;
-    margin-right: 170px;
+    margin-right: 50px;
   }
   
   .user-menu.active .dropdown{

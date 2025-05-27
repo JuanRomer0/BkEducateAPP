@@ -1,61 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/header.css">
-    <link rel="stylesheet" href="src/css/admin.css">
-    <script src="src/js/main.js" defer></script>
-
-    <title>Admin - LMS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="src/css/admin.css">
+  <link rel="stylesheet" href="src/css/header.css"/>
+  <link rel="stylesheet" href="src/css/responsive-header.css"/>
+  <script src="src/js/main.js" defer></script>
+  <script src="src/js/admin.js" defer></script>
+  <title>Admin Panel - LMS</title>
 </head>
 <body>
-    <header id="headerColor">
-        <div class="logo-container">
-          <a href="index.html" class="lms-logo">LMS<br>Portal</a>
+  <header id="headerColor">
+    <div class="logo-container">
+      <a href="index.html" class="lms-logo">LMS<br>Portal</a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav>
+      <ul class="menu">
+        <li class="lms-nav-item"><a href="index.html">Dashboard</a></li>
+        <li class="lms-nav-item"><a href="courses.html">Courses</a></li>
+        <li class="lms-nav-item"><a href="assignments.html">Assignments</a></li>
+        <li class="lms-nav-item"><a href="progress.html">Progress</a></li>
+        <li class="lms-nav-item"><a href="profile.html">Profile</a></li>
+        <li class="lms-nav-item2"><a href="admin.html" class="active">Admin</a></li>
+        <li><button class="lms-nav-item-moon" id="botonColor" title="Switch to Dark Theme">🌙</button></li>
+      </ul>
+    </nav>
+
+    <!-- Desktop User Menu -->
+    <div class="language-selector">
+      <select>
+        <option>English</option>
+        <option>Español</option>
+        <option>Français</option>
+        <option>Deutsch</option>
+      </select>
+    </div>
+    
+    <div class="user-menu">
+      <div class="user-info">
+        <img src="src/img/imagendeperfil.jpeg" alt="User Profile">
+        <span>Admin User</span>
+        <span style="color: white;">&#9662;</span>
+      </div>
+      <div class="dropdown">
+        <a href="profile.html" style="margin-bottom: 20px; margin-top: 5px;">
+          👤 My Profile
+        </a>
+        <a href="#">
+          ⚙️ Settings
+        </a>
+        <hr style="border: none; border-top: 1px solid red; margin: 15px 0;">
+        <a href="#" style="color: var(--danger-color);">
+          🚪 Logout
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-header">
+      <h3>Navigation</h3>
+      <button class="mobile-nav-close" id="mobile-nav-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-menu">
+      <a href="index.html" class="mobile-nav-item">
+        <i class="fas fa-home"></i>
+        Dashboard
+      </a>
+      <a href="courses.html" class="mobile-nav-item">
+        <i class="fas fa-book"></i>
+        Courses
+      </a>
+      <a href="assignments.html" class="mobile-nav-item">
+        <i class="fas fa-tasks"></i>
+        Assignments
+      </a>
+      <a href="progress.html" class="mobile-nav-item">
+        <i class="fas fa-chart-line"></i>
+        Progress
+      </a>
+      <a href="profile.html" class="mobile-nav-item">
+        <i class="fas fa-user"></i>
+        Profile
+      </a>
+      <a href="admin.html" class="mobile-nav-item active">
+        <i class="fas fa-cog"></i>
+        Admin Panel
+      </a>
+      <div style="border-top: 1px solid var(--border-color); margin: 1rem 0; padding-top: 1rem;">
+        <a href="profile.html" class="mobile-nav-item">
+          <i class="fas fa-user-circle"></i>
+          My Profile
+        </a>
+        <a href="#" class="mobile-nav-item">
+          <i class="fas fa-cog"></i>
+          Settings
+        </a>
+        <button class="lms-nav-item-moon mobile-nav-item" id="mobile-dark-toggle" style="border: none; background: none; width: 100%; text-align: left;">
+          <i class="fas fa-moon"></i>
+          Dark Mode
+        </button>
+        <a href="#" class="mobile-nav-item" style="color: var(--danger-color);">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Sidebar Hamburger -->
+  <button class="admin-hamburger" id="admin-hamburger">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="admin-container">
+    <!-- Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Panel</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="nav-btn active" data-section="dashboard">
+          <i class="fas fa-chart-dashboard"></i>
+          Dashboard
+        </button>
+        <button class="nav-btn" data-section="courses">
+          <i class="fas fa-book"></i>
+          Gestión de Cursos
+        </button>
+        <button class="nav-btn" data-section="assignments">
+          <i class="fas fa-tasks"></i>
+          Gestión de Assignments
+        </button>
+        <button class="nav-btn" data-section="students">
+          <i class="fas fa-users"></i>
+          Base de Estudiantes
+        </button>
+        <button class="nav-btn" data-section="analytics">
+          <i class="fas fa-chart-bar"></i>
+          Analíticas
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <!-- Dashboard Section -->
+      <section id="dashboard-section" class="content-section active">
+        <div class="section-header">
+          <h1>Dashboard Administrativo</h1>
+          <p>Resumen general del sistema educativo</p>
         </div>
-    
-        <nav>
-          <ul class="menu">
-            <li class="lms-nav-item"><a href="index.html">Dashboard</a></li>
-            <li class="lms-nav-item"><a href="courses.html">Courses</a></li>
-            <li class="lms-nav-item"><a href="assignments.html">Assignments</a></li>
-            <li class="lms-nav-item"><a href="progress.html">Progress</a></li>
-            <li class="lms-nav-item"><a href="profile.html">Profile</a></li>
-            <li class="lms-nav-item2"><a href="admin.html" class="active">Admin</a></li>
-            <li><button class="lms-nav-item-moon" id="botonColor" title="Switch to Dark Theme">🌙</button></li>
-          </ul>
-        </nav>
-    
-        <div class="language-selector">
-          <select>
-            <option>English</option>
-            <option>Español</option>
-            <option>Français</option>
-            <option>Deutsch</option>
-          </select>
-        </div>
-    
-        <div class="user-menu">
-            <div class="user-info">
-                <img src="src/img/imagendeperfil.jpeg" alt="User Profile">
-                <span>John Doe</span>
-                <span style="color: white;">&#9662;</span> <!-- Flecha hacia abajo -->
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-book"></i>
             </div>
-            <div class="dropdown">
-              <a href="profile.html" style="margin-bottom: 20px; margin-top: 5px;">
-                  👤 My Profile
-              </a>
-              <a href="#">
-                  ⚙️ Settings
-              </a>
-              <hr style="border: none; border-top: 1px solid red; margin: 15px 0;">
-              <a href="#" style="color: var(--danger-color);">
-                  🚪 Logout
-              </a>
+            <div class="stat-content">
+              <h3 id="total-courses">0</h3>
+              <p>Total Cursos</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="total-assignments">0</h3>
+              <p>Total Assignments</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="total-students">0</h3>
+              <p>Estudiantes Activos</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="avg-progress">0%</h3>
+              <p>Progreso Promedio</p>
+            </div>
           </div>
         </div>
-    
-      </header>
+
+        <div class="dashboard-charts">
+          <div class="chart-container">
+            <h3>Cursos por Categoría</h3>
+            <div class="category-chart" id="category-chart"></div>
+          </div>
+          <div class="chart-container">
+            <h3>Actividad Reciente</h3>
+            <div class="activity-feed" id="activity-feed"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section id="courses-section" class="content-section">
+        <div class="section-header">
+          <h1>Gestión de Cursos</h1>
+          <button class="btn-primary" id="create-course-btn">
+            <i class="fas fa-plus"></i>
+            Crear Nuevo Curso
+          </button>
+        </div>
+
+        <div class="filters-bar">
+          <div class="filter-group">
+            <label for="category-filter">Filtrar por categoría:</label>
+            <select id="category-filter">
+              <option value="">Todas las categorías</option>
+              <option value="videogames">Videogames</option>
+              <option value="backend">Backend</option>
+              <option value="frontend">Frontend</option>
+              <option value="schools">Schools</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="level-filter">Filtrar por nivel:</label>
+            <select id="level-filter">
+              <option value="">Todos los niveles</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+              <option value="all-levels">All Levels</option>
+            </select>
+          </div>
+          <div class="search-group">
+            <input type="text" id="course-search" placeholder="Buscar cursos...">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+
+        <div class="courses-grid" id="admin-courses-grid">
+          <!-- Course cards will be dynamically generated here -->
+        </div>
+      </section>
+
+      <!-- Assignments Section -->
+      <section id="assignments-section" class="content-section">
+        <div class="section-header">
+          <h1>Gestión de Assignments</h1>
+          <button class="btn-primary" id="create-assignment-btn">
+            <i class="fas fa-plus"></i>
+            Crear Nuevo Assignment
+          </button>
+        </div>
+
+        <div class="assignments-table-container">
+          <table class="assignments-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Materia</th>
+                <th>Tipo</th>
+                <th>Fecha Límite</th>
+                <th>Puntos</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="assignments-tbody">
+              <!-- Assignment rows will be populated here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Students Section -->
+      <section id="students-section" class="content-section">
+        <div class="section-header">
+          <h1>Base de Datos de Estudiantes</h1>
+          <button class="btn-primary" id="add-student-btn">
+            <i class="fas fa-user-plus"></i>
+            Agregar Estudiante
+          </button>
+        </div>
+
+        <div class="students-table-container">
+          <table class="students-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Cursos Inscritos</th>
+                <th>Progreso Promedio</th>
+                <th>Fecha de Registro</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="students-tbody">
+              <!-- Student rows will be populated here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Analytics Section -->
+      <section id="analytics-section" class="content-section">
+        <div class="section-header">
+          <h1>Analíticas y Reportes</h1>
+        </div>
+
+        <div class="analytics-grid">
+          <div class="analytics-card">
+            <h3>Rendimiento por Curso</h3>
+            <div class="course-performance" id="course-performance"></div>
+          </div>
+          <div class="analytics-card">
+            <h3>Progreso de Estudiantes</h3>
+            <div class="student-progress" id="student-progress"></div>
+          </div>
+          <div class="analytics-card">
+            <h3>Assignments Completados</h3>
+            <div class="assignment-completion" id="assignment-completion"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Course Modal -->
+  <div class="modal-overlay" id="course-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="course-modal-title">Crear Nuevo Curso</h3>
+        <button class="modal-close" id="close-course-modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-navigation">
+          <button class="nav-step active" data-step="1">
+            <span class="step-number">1</span>
+            Información Básica
+          </button>
+          <button class="nav-step" data-step="2">
+            <span class="step-number">2</span>
+            Detalles del Curso
+          </button>
+        </div>
+
+        <form id="course-form">
+          <!-- Step 1: Basic Information -->
+          <div class="form-step active" data-step="1">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="course-category">Categoría del Curso *</label>
+                <select id="course-category" required>
+                  <option value="">Seleccionar categoría</option>
+                  <option value="videogames">Videogames</option>
+                  <option value="backend">Backend</option>
+                  <option value="frontend">Frontend</option>
+                  <option value="schools">Schools</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="course-level">Nivel del Curso *</label>
+                <select id="course-level" required>
+                  <option value="">Seleccionar nivel</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advanced">Advanced</option>
+                  <option value="all-levels">All Levels</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="course-title">Nombre del Curso *</label>
+              <input type="text" id="course-title" placeholder="Ej: Desarrollo Web Completo" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="course-duration">Duración del Curso *</label>
+                <input type="text" id="course-duration" placeholder="Ej: 12 weeks" required>
+              </div>
+
+              <div class="form-group">
+                <label for="course-progress">Progreso Inicial</label>
+                <input type="number" id="course-progress" min="0" max="100" value="0" placeholder="0">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="course-icon">Imagen del Curso</label>
+              <input type="file" id="course-icon" accept="image/*">
+              <div class="image-preview" id="image-preview">
+                <i class="fas fa-image"></i>
+                <p>Selecciona una imagen para el curso</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="course-description">Descripción Básica *</label>
+              <textarea id="course-description" rows="4" placeholder="Descripción general del curso..." required></textarea>
+            </div>
+          </div>
+
+          <!-- Step 2: Course Details -->
+          <div class="form-step" data-step="2">
+            <div class="form-group">
+              <label for="course-prerequisites">Prerequisites</label>
+              <textarea id="course-prerequisites" rows="3" placeholder="Conocimientos previos necesarios..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="prerequisites-description">Descripción de Prerequisites</label>
+              <textarea id="prerequisites-description" rows="3" placeholder="Detalle de los conocimientos previos..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="what-learn">What You'll Learn *</label>
+              <textarea id="what-learn" rows="3" placeholder="Qué aprenderán los estudiantes..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="learn-description">Descripción de What You'll Learn</label>
+              <textarea id="learn-description" rows="3" placeholder="Detalle de lo que aprenderán..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="course-structure">Course Structure *</label>
+              <textarea id="course-structure" rows="3" placeholder="Estructura del curso..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="structure-description">Descripción de Course Structure</label>
+              <textarea id="structure-description" rows="3" placeholder="Detalle de la estructura..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Topics del Curso</label>
+              <div id="topics-container">
+                <div class="topic-item">
+                  <input type="text" placeholder="Título del topic" class="topic-title">
+                  <textarea placeholder="Descripción del topic" class="topic-description"></textarea>
+                  <input type="number" placeholder="Progreso %" min="0" max="100" class="topic-progress">
+                  <button type="button" class="btn-remove-topic">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+              <button type="button" id="add-topic-btn" class="btn-secondary">
+                <i class="fas fa-plus"></i>
+                Agregar Topic
+              </button>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-secondary" id="prev-step" style="display: none;">
+              <i class="fas fa-arrow-left"></i>
+              Anterior
+            </button>
+            <button type="button" class="btn-primary" id="next-step">
+              Siguiente
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <button type="submit" class="btn-success" id="save-course" style="display: none;">
+              <i class="fas fa-save"></i>
+              Guardar Curso
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Assignment Modal -->
+  <div class="modal-overlay" id="assignment-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="assignment-modal-title">Crear Nuevo Assignment</h3>
+        <button class="modal-close" id="close-assignment-modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="assignment-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="assignment-title">Título *</label>
+              <input type="text" id="assignment-title" required>
+            </div>
+            <div class="form-group">
+              <label for="assignment-subtitle">Subtítulo</label>
+              <input type="text" id="assignment-subtitle">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="assignment-description">Descripción *</label>
+            <textarea id="assignment-description" rows="4" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="assignment-subject">Materia *</label>
+              <input type="text" id="assignment-subject" required>
+            </div>
+            <div class="form-group">
+              <label for="assignment-type">Tipo *</label>
+              <select id="assignment-type" required>
+                <option value="">Seleccionar tipo</option>
+                <option value="Project">Project</option>
+                <option value="Report">Report</option>
+                <option value="Case Study">Case Study</option>
+                <option value="Implementation">Implementation</option>
+                <option value="Exam">Exam</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="assignment-due-date">Fecha Límite *</label>
+              <input type="date" id="assignment-due-date" required>
+            </div>
+            <div class="form-group">
+              <label for="assignment-points">Puntos *</label>
+              <input type="number" id="assignment-points" min="1" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="assignment-status">Estado</label>
+              <select id="assignment-status">
+                <option value="active">Activo</option>
+                <option value="locked">Bloqueado</option>
+                <option value="completed">Completado</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="assignment-attachments">Número de Adjuntos</label>
+              <input type="number" id="assignment-attachments" min="0" value="0">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="assignment-modules">Módulos Requeridos</label>
+            <textarea id="assignment-modules" rows="3" placeholder="Separar por comas: Módulo 1, Módulo 2, etc."></textarea>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-secondary" id="cancel-assignment">Cancelar</button>
+            <button type="submit" class="btn-success">
+              <i class="fas fa-save"></i>
+              Guardar Assignment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Student Modal -->
+  <div class="modal-overlay" id="student-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="student-modal-title">Agregar Estudiante</h3>
+        <button class="modal-close" id="close-student-modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="student-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-name">Nombre Completo *</label>
+              <input type="text" id="student-name" required>
+            </div>
+            <div class="form-group">
+              <label for="student-email">Email *</label>
+              <input type="email" id="student-email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-phone">Teléfono</label>
+              <input type="tel" id="student-phone">
+            </div>
+            <div class="form-group">
+              <label for="student-status">Estado</label>
+              <select id="student-status">
+                <option value="active">Activo</option>
+                <option value="inactive">Inactivo</option>
+                <option value="suspended">Suspendido</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="student-courses">Cursos Inscritos</label>
+            <div id="student-courses-list">
+              <!-- Course checkboxes will be populated here -->
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn-secondary" id="cancel-student">Cancelar</button>
+            <button type="submit" class="btn-success">
+              <i class="fas fa-save"></i>
+              Guardar Estudiante
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Container -->
+  <div id="notification-container"></div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+// Mobile Navigation Toggle
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+const mobileNavClose = document.getElementById('mobile-nav-close');
+
+function toggleMobileNav() {
+  hamburgerMenu.classList.toggle('active');
+  mobileNav.classList.toggle('active');
+  mobileNavOverlay.classList.toggle('active');
+  document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+}
+
+function closeMobileNav() {
+  hamburgerMenu.classList.remove('active');
+  mobileNav.classList.remove('active');
+  mobileNavOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+hamburgerMenu.addEventListener('click', toggleMobileNav);
+mobileNavClose.addEventListener('click', closeMobileNav);
+mobileNavOverlay.addEventListener('click', closeMobileNav);
+
+// Admin Sidebar Toggle
+const adminHamburger = document.getElementById('admin-hamburger');
+const adminSidebar = document.querySelector('.admin-sidebar');
+
+adminHamburger.addEventListener('click', () => {
+  adminSidebar.classList.toggle('mobile-open');
+});
+
+// Mobile Dark Mode Toggle
+const mobileDarkToggle = document.getElementById('mobile-dark-toggle');
+if (mobileDarkToggle) {
+  mobileDarkToggle.addEventListener('click', () => {
+    document.getElementById('botonColor').click();
+  });
+}
+
+// Close mobile nav when clicking on nav items
+document.querySelectorAll('.mobile-nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    if (!item.id) { // Don't close for toggle buttons
+      closeMobileNav();
+    }
+  });
+});
+</script>
+
+<script src="src/js/mobile-menu.js"></script>
 </body>
 </html>

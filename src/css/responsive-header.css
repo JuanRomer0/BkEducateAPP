@@ -1,0 +1,394 @@
+/* Mantén tu CSS original y reemplaza con este CSS responsive mejorado */
+
+/* IMPORTANTE: Ocultar cualquier hamburger del contenido principal */
+main .hamburger,
+.content .hamburger,
+.admin-panel .hamburger,
+.dashboard .hamburger,
+main .hamburger-menu,
+.content .hamburger-menu,
+.admin-panel .hamburger-menu,
+.dashboard .hamburger-menu {
+    display: none !important;
+}
+
+/* Ocultar elementos hamburguesa que no sean del header */
+body > *:not(header) .hamburger,
+body > *:not(header) .hamburger-menu,
+body > *:not(header) [class*="hamburger"] {
+    display: none !important;
+}
+
+/* Hamburger Menu Button - Solo visible en móvil y solo en header */
+header .header-hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1002;
+    position: relative;
+}
+
+header .header-hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animación del hamburger cuando está activo */
+header .header-hamburger-menu.active .header-hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+header .header-hamburger-menu.active .header-hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+header .header-hamburger-menu.active .header-hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Menu Overlay */
+.header-mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.header-mobile-menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Mobile Navigation Menu */
+.header-mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: #2c3e50;
+    z-index: 999;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-mobile-nav.active {
+    right: 0;
+}
+
+/* Mobile Nav Header */
+.header-mobile-nav-header {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header-mobile-nav-title {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header-mobile-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.header-mobile-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Nav Content */
+.header-mobile-nav-content {
+    padding: 1rem 0;
+}
+
+.header-mobile-nav-section {
+    margin-bottom: 2rem;
+}
+
+.header-mobile-nav-section-title {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-mobile-nav-item {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.header-mobile-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #438cfa;
+}
+
+.header-mobile-nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #438cfa;
+    color: #438cfa;
+}
+
+/* Mobile Theme Toggle */
+.header-mobile-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    color: white;
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.header-mobile-theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Language Selector */
+.header-mobile-language-selector {
+    padding: 0.75rem 1rem;
+}
+
+.header-mobile-language-selector select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+}
+
+.header-mobile-language-selector select option {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Mobile User Section */
+.header-mobile-user-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.header-mobile-user-info {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 0 1rem 1rem 1rem;
+    border-radius: 8px;
+}
+
+.header-mobile-user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    object-fit: cover;
+}
+
+.header-mobile-user-info span {
+    color: white;
+    font-weight: 500;
+}
+
+/* Divider */
+.header-mobile-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 1rem 0;
+}
+
+/* Dark theme support */
+#headerColor.dark .header-mobile-nav {
+    background-color: #000000;
+}
+
+#headerColor.dark .header-mobile-language-selector select option {
+    background-color: #000000;
+}
+
+/* Asegurar que el contenido principal no tenga elementos hamburguesa */
+.main-content,
+.admin-panel,
+.dashboard,
+.content,
+main {
+    position: relative;
+}
+
+/* Ocultar específicamente iconos hamburguesa en el contenido */
+.main-content .fa-bars,
+.admin-panel .fa-bars,
+.dashboard .fa-bars,
+.content .fa-bars,
+main .fa-bars,
+.main-content [class*="menu-icon"],
+.admin-panel [class*="menu-icon"],
+.dashboard [class*="menu-icon"],
+.content [class*="menu-icon"],
+main [class*="menu-icon"] {
+    display: none !important;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+    header .menu {
+        gap: 1.5rem;
+    }
+    
+    header .language-selector {
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Mostrar hamburger menu SOLO en header */
+    header .header-hamburger-menu {
+        display: flex;
+    }
+    
+    /* Ocultar navegación principal en móvil */
+    header nav {
+        display: none;
+    }
+    
+    /* Ocultar selector de idioma en móvil */
+    header .language-selector {
+        display: none;
+    }
+    
+    /* Ajustar header para móvil */
+    header {
+        padding: 1rem;
+        justify-content: space-between;
+    }
+    
+    /* Ajustar logo */
+    header .lms-logo {
+        font-size: 20px;
+        line-height: 18px;
+    }
+    
+    /* Ajustar user menu para móvil */
+    header .user-menu {
+        margin-right: 0;
+    }
+    
+    header .user-info span:not(:last-child) {
+        display: none;
+    }
+    
+    header .user-info img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* IMPORTANTE: Asegurar que NO aparezcan hamburgers en el contenido */
+    main h1::before,
+    .admin-panel h1::before,
+    .dashboard h1::before,
+    .content h1::before {
+        content: none !important;
+    }
+    
+    /* Ocultar cualquier pseudo-elemento que pueda crear iconos hamburguesa */
+    main *::before,
+    main *::after {
+        content: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.75rem;
+    }
+    
+    header .lms-logo {
+        font-size: 18px;
+        line-height: 16px;
+    }
+    
+    .header-mobile-nav {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .header-mobile-nav.active {
+        right: 0;
+    }
+    
+    header .user-info img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Prevenir scroll del body cuando el menú está abierto */
+body.header-mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Reglas específicas para evitar conflictos con admin panel */
+.admin-panel,
+.admin-content,
+.admin-section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Asegurar que los títulos del admin no tengan iconos hamburguesa */
+.admin-panel h1,
+.admin-panel h2,
+.admin-panel h3,
+.dashboard h1,
+.dashboard h2,
+.dashboard h3 {
+    position: relative;
+}
+
+.admin-panel h1::before,
+.admin-panel h2::before,
+.admin-panel h3::before,
+.dashboard h1::before,
+.dashboard h2::before,
+.dashboard h3::before {
+    display: none !important;
+}

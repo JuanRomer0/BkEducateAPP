@@ -6,57 +6,62 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="src/css/dashboard.css"/>
   <link rel="stylesheet" href="src/css/header.css"/>
+  <link rel="stylesheet" href="src/css/responsive-header.css"/>
   <script src="src/js/main.js" defer></script>
   <title>Dashboard - LMS</title>
 </head>
 <body>
   <header id="headerColor">
     <div class="logo-container">
-      <a href="index.html" class="lms-logo">LMS<br>Portal</a>
+        <a href="index.html" class="lms-logo">LMS<br>Portal</a>
     </div>
 
     <nav>
-      <ul class="menu">
-        <li class="lms-nav-item2"><a href="index.html" class="active">Dashboard</a></li>
-        <li class="lms-nav-item"><a href="courses.html">Courses</a></li>
-        <li class="lms-nav-item"><a href="assignments.html">Assignments</a></li>
-        <li class="lms-nav-item"><a href="progress.html">Progress</a></li>
-        <li class="lms-nav-item"><a href="profile.html">Profile</a></li>
-        <li class="lms-nav-item"><a href="admin.html">Admin</a></li>
-        <li><button class="lms-nav-item-moon" id="botonColor" title="Switch to Dark Theme">🌙</button></li>
-      </ul>
+        <ul class="menu">
+            <li class="lms-nav-item2"><a href="index.html" class="active">Dashboard</a></li>
+            <li class="lms-nav-item"><a href="courses.html">Courses</a></li>
+            <li class="lms-nav-item"><a href="assignments.html">Assignments</a></li>
+            <li class="lms-nav-item"><a href="progress.html">Progress</a></li>
+            <li class="lms-nav-item"><a href="profile.html">Profile</a></li>
+            <li class="lms-nav-item"><a href="admin.html">Admin</a></li>
+            <li><button class="lms-nav-item-moon" id="botonColor" title="Switch to Dark Theme">🌙</button></li>
+        </ul>
     </nav>
 
     <div class="language-selector">
-      <select>
-        <option>English</option>
-        <option>Español</option>
-        <option>Français</option>
-        <option>Deutsch</option>
-      </select>
+        <select>
+            <option>English</option>
+            <option>Español</option>
+            <option>Français</option>
+            <option>Deutsch</option>
+        </select>
     </div>
     
     <div class="user-menu">
         <div class="user-info">
             <img src="/src/img/imagendeperfil.jpeg" alt="User Profile">
             <span>John Doe</span>
-            <span style="color: white;">&#9662;</span> <!-- Flecha hacia abajo -->
+            <span style="color: white;">&#9662;</span>
         </div>
         <div class="dropdown">
-          <a href="profile.html" style="margin-bottom: 20px; margin-top: 5px;">
-              👤 My Profile
-          </a>
-          <a href="#">
-              ⚙️ Settings
-          </a>
-          <hr style="border: none; border-top: 1px solid lightgray; margin: 15px 0;">
-          <a href="#" style="color: var(--danger-color);">
-              🚪 Logout
-          </a>
-      </div>
+            <a href="profile.html" style="margin-bottom: 20px; margin-top: 5px;">
+                👤 My Profile
+            </a>
+            <a href="#">
+                ⚙️ Settings
+            </a>
+            <hr style="border: none; border-top: 1px solid lightgray; margin: 15px 0;">
+            <a href="#" style="color: var(--danger-color);">
+                🚪 Logout
+            </a>
+        </div>
     </div>
-  </header>
+</header>
 
+<!-- Contenido de ejemplo -->
+
+
+<!-- Incluir el JavaScript -->
     <div class="container_dashboard">
       <h1 class="dashboard-title">Dashboard</h1>
 
@@ -139,5 +144,7 @@
                 <h1>Earned certificate in React Fundamentals</h1>
                 <p>3 day ago</p>
               </div>
+
+              <script src="src/js/mobile-menu.js" defer></script>
             </body>
             </html>

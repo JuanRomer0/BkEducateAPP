@@ -119,17 +119,17 @@
       "title": "Final Project: E-commerce Platform",
       "subtitle": "Full Stack Development",
       "description": "Build a complete e-commerce platform using React, Node.js, and MongoDB. Implement user authentication, product management, shopping cart, and payment processing.",
+      "subject": "Web Development",
+      "type": "Project",
       "dueDate": "2024-03-14",
       "points": 100,
-      "type": "Project",
+      "status": "completed",
+      "attachments": 2,
       "requiredModules": [
         "Frontend Development",
         "Backend Integration",
         "Database Design"
       ],
-      "attachments": 2,
-      "status": "completed",
-      "subject": "Web Development",
       "submitted": false
     },
     {
